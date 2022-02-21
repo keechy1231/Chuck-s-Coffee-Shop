@@ -20,11 +20,8 @@ menu = "Black Coffee, Espresso, Latte, Cappucino, Frappuccino"
 #Ask the customer what they would like from the menu and store it in the variable order.
 order = input(name + ", what would you like from our menu today? Here is what we are serving.\n" + menu + "\n")
 
-#Ask the customer how many coffees they would like and store it in the variable QUANTITY
-quantity = input("How many coffees would you like?\n")
 
 #Set the price for coffee
-
 if order == "Frappuccino":
   price = 13
 elif order == "Black Coffee":
@@ -35,17 +32,21 @@ elif order == "Latte":
     price = 6
 elif order == "Cappucino":
     price = 10
-elif order != "Cappucino""Latte":
-    print("Sorry we don't serve that here")
-    price = 0
+else:
+   print("Sorry we don't serve that here")
+   exit()
+#Ask the customer how many coffees they would like and store it in the variable QUANTITY
+quantity = input("How many coffees would you like?\n")
 
 #ask if they want wipped cream
 whipped_cream = input ("Do you want wipped cream with that?\n")
 
 if whipped_cream == "yes":
+    price = price + 2
     extra = input ("do you want extra whipped cream?\n")
     if extra == "yes":
         print("okay, you can have double the whipped cream")
+        price = price + 1
 
 
 
